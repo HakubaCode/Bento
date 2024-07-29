@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url('assets/Wallpaper.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 80%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+}
+
+.bento-item {
+    background-color: #000000;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+    text-decoration: none;
+}
+
+.bento-item:hover {
+    background-color: #141414;
+}
+
+.item-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    animation: fadeIn 1s ease-out forwards, wave 2s ease-in-out infinite; /* Slight Bounce Effect */
+}
+
+.item-2, .item-3 {
+    grid-column: span 1;
+}
+
+.item-4 .item-5 .item-6 .item-7 .item-8 .item-9{
+    grid-column: span 2;
+    
+}
+
+/* Copyright */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    opacity: 0.50;
+    width: 100%;
+    text-align: left;
+}
+
+@keyframes fadeIn { /* Animations Begin */
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); } /* Animations End */
+}
+
+/* Stagger the fade-in animation for each item */
+.item-1 { animation-delay: 0.1s; }
+.item-2 { animation-delay: 0.3s; }
+.item-3 { animation-delay: 0.5s; }
+.item-4 { animation-delay: 0.7s; }
+.item-5 { animation-delay: 0.9s; }
+.item-6 { animation-delay: 1.1s; }
+.item-7 { animation-delay: 1.3s; }
+.item-8 { animation-delay: 1.5s; }
+.item-9 { animation-delay: 1.7s; }
+
+/*Cat Gif */
+.corner-gif {
+    position: fixed; /* Fixes the position relative to the viewport */
+    bottom: 0; /* Positions it at the bottom of the viewport */
+    right: 0; /* Positions it at the right edge of the viewport */
+    width: 100px; /* Set width to 100 pixels */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 10px; /* Adds a bit of space from the edges */
+}
+
+/* Mystery Button */
+#mysteryButton {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#mysteryButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Reveal Photos with Blur Fade Effect */
+.hakuba-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.hakuba-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 2;
+    transition: opacity 0.5s ease;
+}
+
+.hakuba-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.hakuba-container:hover .hakuba-content {
+    opacity: 0;
+}
+
+.hakuba-container:hover .hakuba-image {
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* Optional: Add a subtle zoom effect to the image */
+.hakuba-image {
+    transform: scale(1.1);
+    transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+}
+
+.hakuba-container:hover .hakuba-image {
+    transform: scale(1);
+}
+
+.bento-item.hakuba-container {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Existing styles remain unchanged */
+
+/* General styles for all bento items */
+/* Existing styles remain unchanged */
+
+/* General styles for all bento items */
+.bento-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* General styles for content and image */
+.bento-content {
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.5s ease;
+}
+
+.bento-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(1.1);
+    transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+}
+
+.bento-item:hover .bento-content {
+    opacity: 0;
+}
+
+.bento-item:hover .bento-image {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+/* Specific styles for each button */
+.item-1 { /* Hakuba */
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item-2::after, .item-3::after, .item-4::after, .item-5::after, 
+.item-6::after, .item-7::after, .item-8::after, .item-9::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.item-2::after { background-image: url('assets/Payhip.png'); }
+.item-3::after { background-image: url('assets/Behance.png'); }
+.item-4::after { background-image: url('assets/Form.png'); }
+.item-5::after { background-image: url('assets/IG.png'); }
+.item-6::after { background-image: url('assets/coffee.png'); }
+.item-7::after { background-image: url('assets/git.png'); }
+.item-8::after { background-image: url('assets/LinkedIn.png'); }
+.item-9::after { background-image: url('assets/c.png'); }
+
+.bento-item:hover::after {
+    opacity: 1;
+}
+
+/* Ensure text is visible on background images */
+.bento-item .bento-content {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+}
