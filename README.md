@@ -1,4 +1,4 @@
-# [Bento Web Design Project](https://https://bento-hakuba.netlify.app/) 🎨
+# [Bento Web Design Project](https://bento-hakuba.netlify.app/) 🎨
 
 ## Project Description 📝
 This project showcases a modern, interactive web page design using a bento-style grid layout. It's a personal landing page that provides links to various online profiles and services, featuring a visually appealing and user-friendly interface. The design incorporates animated elements, hover effects, and a unique "Mystery Button" feature.
